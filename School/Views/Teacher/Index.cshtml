@@ -1,0 +1,40 @@
+﻿@model IEnumerable<School.Models.Teacher>
+<h1> Teachers </h1>
+
+@Html.ActionLink("Create Teacher", "Create")
+
+<table class="table-bordered table-hover table-striped table-responsive text-center">
+    <tr>
+        <th>@Html.DisplayNameFor(t => t.Name)</th>
+        <th>@Html.DisplayNameFor(t => t.DateOfBirth)</th>
+        <th>@Html.DisplayNameFor(t => t.BlogUrl)</th>
+        <th>@Html.DisplayNameFor(t => t.Email)</th>
+        <th>@Html.DisplayNameFor(t => t.Mobile)</th>
+        <th>@Html.DisplayNameFor(t => t.NationalId)</th>
+        <th>@Html.DisplayNameFor(t => t.Passowrd)</th>
+        <th>@Html.DisplayNameFor(t => t.Salary)</th>
+        <th>@Html.DisplayNameFor(t => t.ismarried)</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    @foreach (var T in Model)
+    {
+<tr>
+    <td>@Html.DisplayFor(x => T.Name)</td>
+    <td>@Html.DisplayFor(x => T.DateOfBirth)</td>
+    <td>@Html.DisplayFor(x => T.BlogUrl)</td>
+    <td>@Html.DisplayFor(x => T.Email)</td>
+    <td>@Html.DisplayFor(x => T.Mobile)</td>
+    <td>@Html.DisplayFor(x => T.NationalId)</td>
+    <td>@Html.DisplayFor(x => T.Passowrd)</td>
+    <td>@Html.DisplayFor(x => T.Salary)</td>
+    <td>@Html.DisplayFor(x => T.ismarried)</td>
+    <td>@Html.ActionLink("Edit ME", "Edit", new { id = T.Id })</td>
+    <td>@Html.ActionLink("Delete Me", "Delete", new { id = T.Id })</td>
+</tr>
+     }
+       
+    </table>
+
+

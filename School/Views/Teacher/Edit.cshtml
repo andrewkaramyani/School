@@ -1,0 +1,62 @@
+﻿@model School.Models.Teacher
+<h1> Edit Teacher </h1>
+<form method="post" action="" novalidate="novalidate">
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.Name)<br/>
+        @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "form-control" } })
+        <!--second parm take empty string "the message error"-->
+        @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.BlogUrl)<br/>
+        @Html.EditorFor(x => x.BlogUrl, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.BlogUrl, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.DateOfBirth)<br/>
+        @Html.EditorFor(x => x.DateOfBirth, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.DateOfBirth, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.Email)<br/>
+        @Html.EditorFor(x => x.Email, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.Mobile)<br/>
+        @Html.EditorFor(x => x.Mobile, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Mobile, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.Passowrd)<br/>
+        @Html.EditorFor(x => x.Passowrd, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Passowrd, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.NationalId)<br/>
+        @Html.EditorFor(x => x.NationalId, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.NationalId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.Salary)<br/>
+        @Html.EditorFor(x => x.Salary, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.Salary, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.DisplayNameFor(t => t.ismarried)<br/>
+        @Html.EditorFor(x => x.ismarried, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(x => x.ismarried, "", new { @class = "text-danger" })
+    </div>
+
+    <div>  <input type="submit" value="Save Edit" /> </div>
+</form>
+
+@Html.ActionLink("Back To List","index")
